@@ -1,0 +1,43 @@
+
+
+main{
+    width:95%;
+    margin:40px auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    align-items:flex-start
+}
+main >div{
+    width:23%;
+    margin:10px;
+    position:relative;
+    cursor:pointer
+}
+main div img{
+    width:100%
+
+}
+.movie-info{
+    display:none;
+    position:absolute;
+    inset:0;
+text-align:center;
+background:rgba(0,0,0,0.8);
+padding-top:20px;
+color:white
+}
+main>div:hover .movie-info{
+display:block
+}
+@media screen and (max-width:992px) {
+    main >div{
+        width:45%;
+    }    
+}
+@media screen and (max-width:769px) {
+    main >div{
+        margin:10px auto;
+        width:90%;
+    }    
+}

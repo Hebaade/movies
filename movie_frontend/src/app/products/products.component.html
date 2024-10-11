@@ -1,0 +1,15 @@
+<form class="d-flex m-4" role="search">
+  <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search" [(ngModel)]="this.searchText">
+  <button class="btn btn-outline-success" (click)="search()">Search</button>
+  </form>
+<main>
+        @for (movie of this.allMovies; track movie) {
+            <div >
+ <img src="{{movie.poster}}" alt="poster" >
+ <div class="movie-info" routerLink="details/{{movie._id}}">
+    <h4>{{movie.name}}</h4>
+ </div>
+            </div>
+        }
+
+</main>

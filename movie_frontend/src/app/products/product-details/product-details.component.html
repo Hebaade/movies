@@ -1,0 +1,19 @@
+<div class="card mt-3 w-100" >
+    <div class="row g-0">
+      <div class="col-md-4 m-auto">
+        <img src="{{this.movie.poster}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Name:{{this.movie.name}}</h5>
+          <p class="card-text"><span class="fw-bold m-1">Overview:</span>{{this.movie.description}}</p>
+          <p class="card-text"><span class="fw-bold m-1">Category:</span>{{this.category.name}}</p>
+          <p class="card-text"><span class="fw-bold m-1">Rate:</span>{{this.movie.rate}}</p>
+          <p class="card-text"><small class="text-body-secondary">Release Date:{{this.movie.releaseDate}}</small></p>
+        <button (click)="goBack()" class="btn btn-outline-success">Back To Movies</button>
+        <button (click)="deleteMovie()" class="btn btn-outline-danger m-2">Delete Movie</button>
+        <button routerLink="update/{{this.movie._id}}" class="btn btn-outline-warning m-2">Update Movie</button>
+        </div>
+      </div>
+    </div>
+  </div>

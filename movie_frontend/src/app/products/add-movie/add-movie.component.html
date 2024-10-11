@@ -1,0 +1,32 @@
+<h1 class="alert alert-info mb-4  ">Add New Movie</h1>
+<form class="w-75 m-3" (submit)="addNewMovie()">
+    <div class="mb-2">
+        <label class="mb-1">Poster URL:</label>
+        <input type="text" name="poster" class="form-control" [(ngModel)]="this.movie.poster">
+    </div>
+<div class="mb-2">
+    <label class="mb-1">Name:</label>
+    <input type="text" name="name" class="form-control" [(ngModel)]="this.movie.name">
+</div>
+<div class="mb-2">
+    <label class="mb-1">Overview:</label>
+    <input type="text" name="description" class="form-control" [(ngModel)]="this.movie.description">
+</div>
+<div class="mb-2">
+    <label class="mb-1">Rate:</label>
+    <input type="number" name="rate" class="form-control" [(ngModel)]="this.movie.rate">
+</div>
+<div class="mb-2">
+    <label class="mb-1">Release Date:</label>
+    <input type="text" name="releaseDate" class="form-control" [(ngModel)]="this.movie.releaseDate">
+</div>
+<div>
+    <label class="mb-1">Category:</label>
+    <select name="categoryId" class="form-select" [(ngModel)]="this.movie.categoryId">
+        @for (category of this.categories; track category) {
+          <option [value]="category._id">{{ category.name}}</option> 
+        }
+    </select>
+</div>
+<button type="submit" class="btn btn-outline-info mt-3 " style="padding: 12px 20px;">Add</button>
+</form>

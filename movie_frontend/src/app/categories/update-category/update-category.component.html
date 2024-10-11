@@ -1,0 +1,12 @@
+<h2 class="alert alert-info">Update Category</h2>
+<form class="w-75 m-3" (submit)="onSubmit()">
+    <div class="mb-2">
+        <label class="mb-2">Name:</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="this.category.name">
+    </div>
+    <div>
+        <label class="mb-2">Description:</label>
+        <input type="text" name="description" class="form-control" [(ngModel)]="this.category.description">
+    </div>
+   <button type="submit" class="btn btn-warning mt-2">Update</button>
+</form>
